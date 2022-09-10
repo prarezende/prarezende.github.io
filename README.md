@@ -4,6 +4,9 @@
 ## Já está funcional, porém ainda em construção.
 
 [Acesse prarezende.github.io](https://prarezende.github.io)
+
+![image](https://user-images.githubusercontent.com/70259075/189505089-d8696993-55ed-4936-a334-11837c1d7949.png)
+
     
 
 ## Autora
