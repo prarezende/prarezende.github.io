@@ -1,291 +1,54 @@
 <!doctype html>
 <html lang="pt" dir="ltr">
   <head>
-    <title>prarezende2 - Links que mais uso</title>
+    <title>prarezende - Links que mais uso</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Prarezende.io é um site para ouvir playlists do Spotify e acessar o Google, Dio, Voitto e Dltec. Ainda em Construção" />
     <meta name="keywords" content="ouvir, playlists, playlist, spotify, listen, listening, dio, voitto, dltec, google" />
     <link rel="dns-prefetch" href="prarezende.github.io">	
     <!--<meta name="viewport" content="initial-scale=1.0,width=320.1"> -->	
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="prarezende2.css"> 
 
-
-    <style type="text/css">
-      
-	  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-
-	* {
-		font-family: Roboto;
-	}
-
-     /* #background {
-        background-image: url("../img/img_cidade.jpg");
-        background-size: cover;
-        height: 200px;
-        width="80%";
-             
-      }*/ 
-
-	  * {
-			font-family: Roboto;
-		}
-
-      a {
-          color: whitesmoke;
-          border-color: darkred;
-          padding: 16px 38px;
-      }
-      a:hover {
-        background-color: green;
-      }
- 
-     img {
-         /* width: 30px;*/
-          width: 100%;
-          height: auto;
-          border-radius: 5%;
-      }
-
-      .logo {
-
-          width: 60px; 
-          height: 60px;
-          border-radius: 50%;
-          padding-top:10px;
-      }
-	   
-     
-     
-     
-
-      body {
-            /*font-family: -webkit-body;*/
-			background-color: yellowgreen;
-			
-      }
-
-      #principal {
-          background-color: yellowgreen;
-      } 
-
-      #cabecalho {
-          background: darkgreen;
-	      width:89%;
-        /*  border:  1px solid lightgreen;
-          border-radius: 8px;*/
-	      /*font-family: -webkit-body;*/
-          font-size: 20px;
-		  /* text-align: center; 
-          line-height: 40px; */
-          padding-bottom: auto;
-          padding-right:20px; 
-            
-          display: flex;
-          justify-content: space-around;
-        
-       }
-      #rodape {
-        background: darkgreen;
-	width:85%; 
-        border:  1px solid lightgreen;
-	border-radius: 8px;
-                  
-	display: inline-block; 
-	font-size: 0.85em;
-    	text-decoration: none;
-    	color:white;
-    	padding: 16px 38px;
-      }
-	  
-
-section {
-  width: 90%;
-  display: inline-block;
-  background: #ccc;
-  height: 30vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-.footer-distributed {
-  background-color: #559929;
-  border-radius: 8px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1); 
-  box-sizing: border-box; 
-  width: 91%;
-  height:18vh;    /* de 12vh para 18vh */ 
-  
+  <!-- <style type="text/css"> 
    
-  text-align: center;    /* de left para center */
-  font: normal 16px sans-serif;
- /* padding: 3px 3px; */    
-}
+       </style> -->
 
-.footer-distributed .footer-left p {
-  /*color: #8f9296;*/
-  color: #white;
-  font-size: 14px;
-  margin:0
-  padding:2px 2px;
-}
-
-/* Footer links */
-
-.footer-distributed p.footer-links {
-  font-size: 18px;
-  font-weight: bold;
-  color: whitesmoke;
-  margin: 0 0 1px;
-  padding: 0;
-  transition: ease .25s;
-}
-
-.footer-distributed p.footer-links a {
-  /* display: inline-block; */
-  line-height: 1.2;
-  text-decoration: none;
-  color: inherit;
-  transition: ease .25s;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "·";
-  /* font-size: 20px; */
-  left: 0;
-  color: #fff;
-  /* display: inline-block; */
-  padding-right: 5px;
-  
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-}
-
-/*
-.footer-distributed .footer-right {
-  
-  float: right; 
-  margin-top: 4px;
-  max-width: 180px; 
-}
-*/
-
-.footer-distributed .footer-right a {
-  display: inline-block;
-  width: 35px;     
-  height: 35px;
-  background-color:inherit;
-  border-radius: 2px;
-  font-size: 14px;
-  color: #ffffff;
-  text-align: center;
-  /* line-height: 35px; 
-  line-height:15px; */
-  margin-left: 2px;
-  transition:all .25s;
-}
-
-
-.footer-distributed .footer-right a:hover{transform:scale(1.2); -webkit-transform:scale(1.2);}
-
-.footer-distributed p.footer-links a:hover{text-decoration:underline;}
-
-/* Media Queries */
-/*
-@media (max-width:600px) {
-  .footer-distributed .footer-left, .footer-distributed .footer-right {
-    text-align: center;
-  }
-  .footer-distributed .footer-right {
-    float: none;       
-    margin: 0 auto 20px;       
-      
-  }
-  .footer-distributed .footer-left p.footer-links {
-    line-height: 1.8;
-  }
-} */
-
-/* passando para nav ao invés de div */
-nav {
-    /*background-color:#ED266B; */
-    background-color:green;
-    width:90.5%;
-    border-radius: 8px;
-    
-}
-nav ul{
-    margin:0;
-}
-nav li {
-    display: inline-block;
-}
-nav li a {
-    display: inline-block;
-    font-size: 1.4em;
-    text-decoration: none;
-    color:white;
-    padding: 16px 38px;
-  
-}
-nav li a:hover {
-    /* background-color: #B00E50; */
-    background-color: darkgreen
-}
-mark {
-   background-color: green;
-   color:silver;
-   border-radius: 8px;
-}
-@media (max-width: 600px) {
-  nav, iframe, .footer-distributed, #rodape, .footer-distributed .footer-right  {
-    width: 100%;
-    height: auto
-    padding:1px;
-  }
-}
-
-  </style>
   </head>
 
   <body class="content"; id="principal">
   <header>
    <nav>
        <ul>
-           <li><img class="logo" src="Patty-sorrindo-vermelho.jpeg" alt="Patty sorrindo"></li>
-           <li><a href="https://www.google.com.br" target="_blank"> Google</a></li> |
-  	   <li><a href= "https://www.udemy.com" target="_blank"> Udemy</a></li> |
-    	   <li><a href= "https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"> Dio</a></li> |
-   	   <li><a href= "https://www.Dltec.com.br" target="_blank"> Dltec</a></li> |
-    	   <li><a href= "https://www.voitto.com.br" target="_blank"> Voitto</a></li> |
-    	   <li><a href= "https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"> Patty/MP3</a></li></ul>			
+          <li><img class="logo" src="Patty-sorrindo-vermelho.jpeg" alt="Patty sorrindo"></li>
+          <li><a href="https://www.google.com.br" target="_blank"> Google</a></li> |
+  	      <li><a href= "https://www.udemy.com" target="_blank"> Udemy</a></li> |
+    	    <li><a href= "https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"> Dio</a></li> |
+   	      <li><a href= "https://www.Dltec.com.br" target="_blank"> Dltec</a></li> |
+    	    <li><a href= "https://www.voitto.com.br" target="_blank"> Voitto</a></li> |
+    	    <li><a href= "https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"> Patty/MP3</a></li></ul>			
     </nav>
    
-   </header>
+  </header>
 
 <p>
 
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
- <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
- <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
- <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4ErdfOdFfbDdISqqgv23GV?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
- 
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4ErdfOdFfbDdISqqgv23GV?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-  <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
 
  </body>
 
 <div>
 <footer class="footer-distributed">
-        <div id="rodape">
+    <div id="rodape">
 
 <a href= "https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"> Festa Top</a> |
 <a href= "https://open.spotify.com/playlist/60mRonQ7taffA4XKjTfDl0?si=7ce3b36c810e4e86" target="_blank"> Slow Pop&Country</a> |
@@ -293,7 +56,7 @@ mark {
 <a href= "https://open.spotify.com/playlist/4ErdfOdFfbDdISqqgv23GV?si=c59277cc02b24a88" target="_blank"> Fingerstyle</a> |
 <a href= "https://open.spotify.com/playlist/15eG4OqcDBqaDqkUTkiaha?si=8f47ca709190463d" target="_blank"> Mix 80_2019</a> |
 <a href = "https://open.spotify.com/playlist/4jwGfWyIhfMF12iabW9mvr?si=c0e8bf288a644b4b" target="_blank"> Heavy Metal</a>
-</div>
+    </div>
 
 
 <!-- <footer>
@@ -306,13 +69,11 @@ mark {
 	
 
  			<div class="footer-right">
- 
 			
 				<a href="img/icons8-facebook-64.png"><i class="fa fa-facebook"></i><img src="img/icons8-facebook-64.png"> </a>
 				<a href="img/icons8-instagram-64.png"><i class="fa fa-instagram"></i><img src="img/icons8-instagram-64.png"> </a>
 				<a href="img/icons8-linkedin-64.png"><i class="fa fa-linkedin"></i><img src="img/icons8-linkedin-circled-48.png"> </a>
 				<a href="https://github.com/prarezende"><img src="img/icons8-github-50.png"></a>
-	
              
 			 </div> 
 
@@ -333,8 +94,10 @@ mark {
 					
 					<a href="#">Under Construction</a>
 				</p> 
-                	</div> -->
+
+          </div> -->
 
 			<pre>	 <mark>        &copy; 2022 <a href="mailto:prarezende@yahoo.com">@prarezende</a></pre></mark>         
+
 		</footer>
 </html>
