@@ -75,16 +75,17 @@
       #rodape {
         /* background: darkgreen; */
         background-color: darkblue;
-	      width:85%; 
+	      width:90%; 
         /* border:  1px solid lightgreen; */
         border: 1px solid lightcyan;
-	      border-radius: 8px;
+	border-radius: 8px;
                   
-	      display: inline-block; 
-	      font-size: 0.85em;
-    	  text-decoration: none;
-    	  color:white;
-    	  padding: 16px 38px;
+	display: inline-block; 
+	font-size: 0.85em;
+    	text-decoration: none;
+    	color:white;
+    	/*padding: 16px 38px; */
+        padding: 16px 1px;
       }
 	  
 
@@ -105,7 +106,7 @@ section {
   border-radius: 8px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1); 
   box-sizing: border-box; 
-  width: 91%;
+  width: 100%;
   height:18vh;    /* de 12vh para 18vh */ 
   
    
@@ -125,7 +126,7 @@ section {
 /* Footer links */
 
 .footer-distributed p.footer-links {
-  font-size: 18px;
+  font-size: 18px; 
   font-weight: bold;
   color: whitesmoke;
   margin: 0 0 1px;
@@ -155,22 +156,22 @@ section {
   content: none;
 }
 
-/*
+/*  
 .footer-distributed .footer-right {
   
   float: right; 
   margin-top: 4px;
-  max-width: 180px; 
+  max-width: 180px;  
 }
 */
 
 .footer-distributed .footer-right a {
   display: inline-block;
-  width: 35px;     
+  width: 35px;      
   height: 35px;
   background-color:inherit; 
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 12px;
   color: #ffffff;
   text-align: center;
   /* line-height: 35px; 
@@ -205,7 +206,8 @@ nav {
     /*background-color:#ED266B; */
    /* background-color:green; */
    background-color: blue;
-    width:90.5%;
+    /* width:90.5%;  */
+    width:100%;
     border-radius: 8px;
     
 }
@@ -235,10 +237,16 @@ mark {
    border-radius: 8px;
 }
 
-@media (max-width: 600px) {
-  nav, iframe, .footer-distributed, #rodape, .footer-distributed .footer-right  {
+@media (max-width: 804px) { /* era 600 px */
+  nav, iframe, .footer-distributed, #rodape, .footer-distributed .footer-right{
     width: 100%;
     height: auto
     padding:1px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+           
   }
 }
+
+====
