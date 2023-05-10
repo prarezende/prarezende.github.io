@@ -1,7 +1,7 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt" dir="ltr">
   <head>
-    <title>Links que mais uso</title>
+    <title>prarezende2 - Links que mais uso</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Prarezende.io é um site para ouvir playlists do Spotify e acessar o Google, Dio, Voitto e Dltec. Ainda em Construção" />
@@ -23,7 +23,8 @@
         background-image: url("../img/img_cidade.jpg");
         background-size: cover;
         height: 200px;
-        width="80%"
+        width="80%";
+             
       }*/ 
 
 	  * {
@@ -33,22 +34,25 @@
       a {
           color: whitesmoke;
           border-color: darkred;
-          padding: 16px 38px; 
+          padding: 16px 38px;
       }
       a:hover {
         background-color: green;
       }
  
      img {
-          width: 30px;
+         /* width: 30px;*/
+          width: 100%;
           height: auto;
           border-radius: 5%;
       }
 
       .logo {
-          width: 60px;
+
+          width: 60px; 
           height: 60px;
-          border-radius: 5%;
+          border-radius: 50%;
+          padding-top:10px;
       }
 	   
      
@@ -61,37 +65,37 @@
 			
       }
 
-      /*#principal {
+      #principal {
           background-color: yellowgreen;
-      } */
+      } 
 
       #cabecalho {
           background: darkgreen;
 	      width:89%;
-          border:  1px solid lightgreen;
-          border-radius: 8px;
+        /*  border:  1px solid lightgreen;
+          border-radius: 8px;*/
 	      /*font-family: -webkit-body;*/
           font-size: 20px;
 		  /* text-align: center; 
           line-height: 40px; */
           padding-bottom: auto;
-          padding-right:20px;
+          padding-right:20px; 
+            
           display: flex;
           justify-content: space-around;
-
-
+        
        }
       #rodape {
-          background: darkgreen;
-		  width:91%;
-		  border:  1px solid lightgreen;
-		  border-radius: 8px;
-		  font-size: 17px;
-		  font-weight: bold
-          border-radius: 8px;
-          display: flex;
-          justify-content: space-around;
-          padding-bottom: 15px;
+        background: darkgreen;
+	width:85%; 
+        border:  1px solid lightgreen;
+	border-radius: 8px;
+                  
+	display: inline-block; 
+	font-size: 0.85em;
+    	text-decoration: none;
+    	color:white;
+    	padding: 16px 38px;
       }
 	  
 
@@ -108,36 +112,40 @@ section {
 
 .footer-distributed {
   background-color: #559929;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
-  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1); 
+  box-sizing: border-box; 
   width: 91%;
-  heigh: 12vh; 
-  text-align: left;
+  height:18vh;    /* de 12vh para 18vh */ 
+  
+   
+  text-align: center;    /* de left para center */
   font: normal 16px sans-serif;
-    padding: 20px 10px;
-  /*padding: 45px 50px;*/
+ /* padding: 3px 3px; */    
 }
 
 .footer-distributed .footer-left p {
   /*color: #8f9296;*/
   color: #white;
   font-size: 14px;
-  margin: 0;
+  margin:0
+  padding:2px 2px;
 }
+
 /* Footer links */
 
 .footer-distributed p.footer-links {
   font-size: 18px;
   font-weight: bold;
   color: whitesmoke;
-  margin: 0 0 10px;
+  margin: 0 0 1px;
   padding: 0;
   transition: ease .25s;
 }
 
 .footer-distributed p.footer-links a {
-  display: inline-block;
-  line-height: 1.8;
+  /* display: inline-block; */
+  line-height: 1.2;
   text-decoration: none;
   color: inherit;
   transition: ease .25s;
@@ -145,94 +153,138 @@ section {
 
 .footer-distributed .footer-links a:before {
   content: "·";
-  font-size: 20px;
+  /* font-size: 20px; */
   left: 0;
   color: #fff;
-  display: inline-block;
+  /* display: inline-block; */
   padding-right: 5px;
+  
 }
 
 .footer-distributed .footer-links .link-1:before {
   content: none;
 }
 
+/*
 .footer-distributed .footer-right {
-  float: right;
-  margin-top: 6px;
-  max-width: 180px;
+  
+  float: right; 
+  margin-top: 4px;
+  max-width: 180px; 
 }
+*/
 
 .footer-distributed .footer-right a {
   display: inline-block;
-  width: 35px;
+  width: 35px;     
   height: 35px;
   background-color:inherit;
   border-radius: 2px;
-  font-size: 20px;
+  font-size: 14px;
   color: #ffffff;
   text-align: center;
-  line-height: 35px;
-  margin-left: 3px;
+  /* line-height: 35px; 
+  line-height:15px; */
+  margin-left: 2px;
   transition:all .25s;
 }
 
-.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.2); -webkit-transform:scale(1.2);}
 
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
 /* Media Queries */
-
+/*
 @media (max-width:600px) {
   .footer-distributed .footer-left, .footer-distributed .footer-right {
     text-align: center;
   }
   .footer-distributed .footer-right {
-    float: none;
-    margin: 0 auto 20px;
+    float: none;       
+    margin: 0 auto 20px;       
+      
   }
   .footer-distributed .footer-left p.footer-links {
     line-height: 1.8;
   }
+} */
+
+/* passando para nav ao invés de div */
+nav {
+    /*background-color:#ED266B; */
+    background-color:green;
+    width:90.5%;
+    border-radius: 8px;
+    
 }
+nav ul{
+    margin:0;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    display: inline-block;
+    font-size: 1.4em;
+    text-decoration: none;
+    color:white;
+    padding: 16px 38px;
+  
+}
+nav li a:hover {
+    /* background-color: #B00E50; */
+    background-color: darkgreen
+}
+mark {
+   background-color: green;
+   color:silver;
+   border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
   </style>
   </head>
 
   <body class="content"; id="principal">
+  <header>
+   <nav>
+       <ul>
+           <li><img class="logo" src="Patty-sorrindo-vermelho.jpeg" alt="Patty sorrindo"></li>
+           <li><a href="https://www.google.com.br" target="_blank"> Google</a></li> |
+  	   <li><a href= "https://www.udemy.com" target="_blank"> Udemy</a></li> |
+    	   <li><a href= "https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"> Dio</a></li> |
+   	   <li><a href= "https://www.Dltec.com.br" target="_blank"> Dltec</a></li> |
+    	   <li><a href= "https://www.voitto.com.br" target="_blank"> Voitto</a></li> |
+    	   <li><a href= "https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"> Patty/MP3</a></li></ul>			
+    </nav>
+   
+   </header>
 
-    <div>
-        <div id="cabecalho">
-		<img class="logo" src="Patty-sorrindo-vermelho.jpeg">
-            
-        
-    <a href= "https://www.google.com.br" target="_blank"> Google</a> |
-    <a href= "https://www.udemy.com" target="_blank"> Udemy</a> |
-    <a href= "https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"> Dio</a> |
-    <a href= "https://www.Dltec.com.br" target="_blank"> Dltec</a> |
-    <a href= "https://www.voitto.com.br" target="_blank"> Voitto</a> |
-    <a href= "https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"> Patty/MP3</a>			
-
- 
-
-</div>
-<br>
 <p>
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+ <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+ <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4ErdfOdFfbDdISqqgv23GV?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+ <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4ErdfOdFfbDdISqqgv23GV?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
  
 
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="30%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
 
  </body>
 
-<br>
 <div>
+<footer class="footer-distributed">
         <div id="rodape">
 
 <a href= "https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"> Festa Top</a> |
@@ -247,21 +299,24 @@ section {
 <!-- <footer>
     
     
-<section><h6> Todos os Direitos Reservados: @prarezende
-   <h6 id="atual">Atualizado em 26/01/2022</section>
-	</footer> -->
-		<footer class="footer-distributed">
+	<section><h6> Todos os Direitos Reservados: @prarezende
+        <h6 id="atual">Atualizado em 26/01/2022</section>
+</footer> -->
+	<!--	<footer class="footer-distributed"> -->
+	
 
-			<div class="footer-right">
+ 			<div class="footer-right">
+ 
 			
 				<a href="img/icons8-facebook-64.png"><i class="fa fa-facebook"></i><img src="img/icons8-facebook-64.png"> </a>
 				<a href="img/icons8-instagram-64.png"><i class="fa fa-instagram"></i><img src="img/icons8-instagram-64.png"> </a>
 				<a href="img/icons8-linkedin-64.png"><i class="fa fa-linkedin"></i><img src="img/icons8-linkedin-circled-48.png"> </a>
 				<a href="https://github.com/prarezende"><img src="img/icons8-github-50.png"></a>
+	
+             
+			 </div> 
 
-			</div>
-
-			<div class="footer-left">
+		<!--	<div class="footer-left">
 
 				<p class="footer-links">
 					<a class="link-1" href="#">Home</a>
@@ -277,10 +332,9 @@ section {
 					<a href="#">Contact</a>
 					
 					<a href="#">Under Construction</a>
-				</p>
+				</p> 
+                	</div> -->
 
-				<p><a href="mailto:prarezende@yahoo.com">@prarezende</a> &copy; 2022</p>
-			</div>
-
+			<pre>	 <mark>        &copy; 2022 <a href="mailto:prarezende@yahoo.com">@prarezende</a></pre></mark>         
 		</footer>
 </html>
