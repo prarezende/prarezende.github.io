@@ -111,6 +111,9 @@ section {
   font-weight: 700;
   text-decoration: underline;
 }
+.material-symbols-outlined {
+  font-size: 32px; /* Aumenta o tamanho do ícone para 32 pixels */
+}
 
 .footer-distributed {
   /*background-color: #559929; */
