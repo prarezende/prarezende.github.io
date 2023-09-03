@@ -1,6 +1,7 @@
 # [prarezende.github.io](https://prarezende.github.io)
 
 ## Site teste para ouvir algumas playlists do Spotify e acessar o Google, Dio, Voitto e Dltec. 
+## Se gostarem, deixem o like no Spotify!
 ## Já está funcional, porém ainda em construção.
 
 [Acesse prarezende.github.io](https://prarezende.github.io)
