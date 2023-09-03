@@ -107,8 +107,12 @@ section {
   font-weight: 700;
   text-decoration: underline;
 }
-.material-symbols-outlined {
+/*.material-symbols-outlined {
   font-size: 36px; /* Aumenta o tamanho do ícone para 32 pixels */
+/*} */
+
+i.material-symbols-outlined {
+  font-size: 32px !important; /* Use !important para garantir a prioridade */
 }
 
 .footer-distributed {
