@@ -1,0 +1,148 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Defina a fonte padrão para toda a página */
+  body {
+    font-family: Roboto, sans-serif;
+    background-color: yellowgreen;
+  }
+  
+  /* Estilo para links */
+  a {
+    color: whitesmoke;
+    border-color: darkred;
+    padding: 16px 38px;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: blue;
+  }
+  
+  /* Estilo para imagens */
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+  }
+  
+  /* Estilo para o logotipo */
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding-top: 10px;
+  }
+  
+  /* Estilo para a barra de navegação */
+  nav {
+    background-color: blue;
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  nav ul {
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav li a {
+    display: inline-block;
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    padding: 16px 38px;
+  }
+  
+  nav li a:hover {
+    background-color: #B00E50;
+  }
+  
+  /* Estilo para o rodapé */
+  .footer-distributed {
+    background-color: blue;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+    box-sizing: border-box;
+    width: 100%;
+    height: 18vh;
+    text-align: center;
+    font: normal 16px sans-serif;
+    padding: 16px 1px;
+  }
+  
+  .footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0 0 1px;
+    padding: 0;
+    transition: ease 0.25s;
+  }
+  
+  .footer-distributed p.footer-links a {
+    line-height: 1.2;
+    text-decoration: none;
+    color: inherit;
+    transition: ease 0.25s;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "·";
+    left: 0;
+    color: #fff;
+    padding-right: 5px;
+  }
+  
+  /* Estilo para ícones de redes sociais */
+  .footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: inherit;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    margin-left: 2px;
+    transition: all 0.25s;
+  }
+  
+  .footer-distributed .footer-right a:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+  }
+  
+  /* Estilo para marca de direitos autorais */
+  mark {
+    background-color: darkblue;
+    color: silver;
+    border-radius: 8px;
+  }
+  
+  /* Estilo para seção de conteúdo */
+  section {
+    width: 90%;
+    display: inline-block;
+    background: #ccc;
+    height: 30vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  /* Estilo para ícones material design */
+  .material-symbols-outlined {
+    font-size: 32px;
+  }
+  
+  /* Estilo para fonte Google Material Symbols Outlined */
+  @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+  
