@@ -12,34 +12,30 @@
              
       }*/ 
 
-	  * {
-			font-family: Roboto;
-		}
-
-      a {
-          color: whitesmoke;
-          border-color: darkred;
-          padding: 16px 38px;
-      }
-      a:hover {
-        /* background-color: green; */
-        background-color: blue;
-              }
+	 a {
+       color: whitesmoke;
+       border-color: darkred;
+       padding: 16px 38px;
+     }
+   a:hover {
+     /* background-color: green; */
+     background-color: blue;
+           }
  
-     img {
-         /* width: 30px;*/
-          width: 100%;
-          height: auto;
-          border-radius: 5%;
-      }
+   img {
+       /* width: 30px;*/
+        width: 100%;
+        height: auto;
+        border-radius: 5%;
+    }
 
-      .logo {
+    .logo {
 
-          width: 60px; 
-          height: 60px;
-          border-radius: 50%;
-          padding-top:10px;
-      }
+        width: 60px; 
+        height: 60px;
+        border-radius: 50%;
+        padding-top:10px;
+    }
 	   
      
  /*    
@@ -112,7 +108,7 @@ section {
   text-decoration: underline;
 }
 .material-symbols-outlined {
-  font-size: 32px; /* Aumenta o tamanho do ícone para 32 pixels */
+  font-size: 36px; /* Aumenta o tamanho do ícone para 32 pixels */
 }
 
 .footer-distributed {
