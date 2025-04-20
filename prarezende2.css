@@ -124,7 +124,7 @@ i.material-symbols-outlined {
   width: 100%;
   height:18vh;    /* de 12vh para 18vh */ 
   
-   
+  display: inline-block;
   text-align: center;    /* de left para center */
   font: normal 16px sans-serif;
  /* padding: 3px 3px; */    
