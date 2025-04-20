@@ -1,0 +1,167 @@
+/* Importa as fontes Roboto e os ícones do Material Symbols */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,300,700');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Fonte padrão para todos os elementos */
+* {
+  font-family: Roboto, sans-serif;
+}
+
+/* Cor de fundo da página */
+body {
+  background-color: yellowgreen;
+}
+
+/* Imagens com largura total do contêiner e bordas arredondadas */
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+/* Logo com tamanho fixo e borda circular */
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding-top: 10px;
+}
+
+/* Estilização dos links */
+a {
+  color: whitesmoke;
+  border-color: darkred;
+  padding: 16px 38px;
+  text-decoration: none;
+}
+
+/* Efeito hover nos links */
+a:hover {
+  background-color: blue;
+}
+
+/* Estilo geral das seções */
+section {
+  width: 90%;
+  display: inline-block;
+  background: #ccc;
+  height: 30vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Ícones do Material Symbols */
+i.material-symbols-outlined {
+  font-size: 32px !important;
+}
+
+/* Fundo da seção principal */
+#principal {
+  background-color: silver;
+}
+
+/* Cabeçalho com layout flexível e cor de fundo roxa */
+#cabecalho {
+  background-color: blueviolet;
+  width: 89%;
+  font-size: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Estilização do rodapé padrão e distribuído */
+#rodape,
+.footer-distributed {
+  background-color: darkblue;
+  width: 90%;
+  border: 1px solid lightcyan;
+  border-radius: 8px;
+  font-size: 0.85em;
+  color: white;
+  padding: 16px 1px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 1);
+  box-sizing: border-box;
+  height: 18vh;
+  position: relative;
+  font: normal 16px sans-serif;
+}
+
+/* Texto no lado esquerdo do rodapé */
+.footer-distributed .footer-left p {
+  color: white;
+}
+
+/* Links do rodapé com estilo personalizado */
+.footer-distributed .footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: whitesmoke;
+  margin: 0 0 1px;
+  padding: 0;
+  transition: ease 0.25s;
+}
+
+/* Links dentro da seção de links do rodapé */
+.footer-distributed .footer-links a {
+  line-height: 1.2;
+  text-decoration: none;
+  color: inherit;
+  transition: ease 0.25s;
+}
+
+/* Adiciona ponto separador antes de cada link */
+.footer-distributed .footer-links a:before {
+  content: "·";
+  left: 0;
+  color: #fff;
+  padding-right: 5px;
+}
+
+/* Ícones sociais no lado direito do rodapé */
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: inherit;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 2px;
+  transition: all 0.25s;
+}
+
+/* Aumenta os ícones sociais ao passar o mouse */
+.footer-distributed .footer-right a:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+/* Marcações com fundo azul escuro e texto prateado */
+mark {
+  background-color: darkblue;
+  color: silver;
+  border-radius: 8px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 804px) {
+  nav,
+  iframe,
+  .footer-distributed,
+  #rodape,
+  .footer-distributed .footer-right {
+    width: 100%;
+    height: auto;
+    padding: 1px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+}
