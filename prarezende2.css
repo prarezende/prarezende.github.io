@@ -235,12 +235,19 @@ nav {
     border-radius: 8px;
     
 }
+	
 nav ul{
     margin:0;
 }
-nav li {
-    display: inline-block;
+	/* temp */
+nav ul li {
+    display: inline;
+    margin: 0 1em;
 }
+	
+/*nav li {
+    display: inline-block;
+} */
 nav li a {
     display: inline-block;
     font-size: 1.4em;
