@@ -125,6 +125,7 @@ i.material-symbols-outlined {
   height:18vh;    /* de 12vh para 18vh */ 
   
   display: inline-block;
+	position: relative;
   text-align: center;    /* de left para center */
   font: normal 16px sans-serif;
  /* padding: 3px 3px; */    
@@ -266,7 +267,7 @@ mark {
     text-align: center;
     vertical-align: middle;
     font-size: 16px;
-    position: absolute; /* ideal para social icons */
+    position: relative; /* absolute ideal para social icons */
     left: 30%;
     top: 30%;
     transform: translateY(-50%); /* até aqui para social icons */
