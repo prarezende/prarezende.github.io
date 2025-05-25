@@ -1,120 +1,1422 @@
 <!doctype html>
-<html lang="pt" dir="ltr">
-  <head>
-	<link rel="icon" href="img/favicon.ico"/> 
-    <title>prarezende - Links que mais uso</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Prarezende.io é um site para ouvir playlists do Spotify e acessar o Google, Dio, Voitto e Dltec. Ainda em Construção" />
-    <meta name="keywords" content="ouvir, playlists, playlist, spotify, listen, listening, dio, voitto, dltec, google" />
-    <!-- Inicio pré-busca DNS para os domínios do Spotify -->
-	<link rel="dns-prefetch" href="https://prarezende.github.io">
-	<link rel="dns-prefetch" href="https://open.spotify.com">
-    <!-- <link rel="dns-prefetch" href="https://generator"> -->
-    <link rel="dns-prefetch" href="https://www.spotify.com">
-    <link rel="dns-prefetch" href="https://www.open.spotify.com">	
-    <!-- Fim DNS-prefetch Spotify-->
-	<link rel="stylesheet" href="prarezende2.css"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<html lang="pt-br" dir="ltr">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@prarezende - Links e Playlists</title>
+    <meta name="description" content="Ouça playlists do Spotify e acesse seus links favoritos.">
+    <meta name="keywords" content="playlists, spotify, música, links, estudo, produtividade">
 
-  </head>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <body class="content"; id="principal">
-  <header>
-	  <details>
-        <summary>Menu</summary>
-        <p>Links que mais uso </p>
-	  
-   <nav>
-       <ul>
-          <li><img class="logo" src="Patty-sorrindo-vermelho.jpeg" alt="Patty sorrindo"></li>
-          <li><a href="https://www.google.com.br" target="_blank"> Google</a></li> |
-  	      <li><a href= "https://www.udemy.com" target="_blank"> Udemy</a></li> |
-    	  <li><a href= "https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"> Dio</a></li> |
-   	      <li><a href= "https://www.Dltec.com.br" target="_blank"> Dltec</a></li> |
-    	  <li><a href= "https://www.voitto.com.br" target="_blank"> Voitto</a></li> |
-    	  <li><a href= "https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"> Patty/MP3</a></li></ul>			
+    <style>
+        :root {
+            --primary-color: #007acc; /* Cor primária (azul) */
+            --primary-color-dark: #005f99; /* Tom mais escuro para o gradiente */
+            --secondary-color: #001f3f; /* Cor secundária (azul marinho quase preto) */
+            --hover-color: #B00E50; /* Cor ao passar o mouse (fúcsia) */
+            --background-color: #000; /* Fundo principal (preto) */
+            --text-color: whitesmoke; /* Cor do texto claro */
+            --border-radius: 8px; /* Raio da borda padrão */
+        }
+
+        /* Usando a técnica de 1rem = 10px para facilitar a responsividade */
+        html {
+            font-size: 62.5%; /* Base: 16px * 0.625 = 10px */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        header {
+    background: linear-gradient(270deg, #007acc, #005f99, #001f3f, #005f99, #007acc);
+    background-size: 1000% 1000%;
+    animation: gradientWave 12s ease infinite;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius);
+}
+
+@keyframes gradientWave {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+       .header-branding {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+       .header-branding img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+
+       .header-branding h1 {
+            font-size: 3.2rem;
+            margin: 0;
+        } 
+        
+
+        /* --- Estilos para o menu de navegação principal (desktop) --- */
+        #main-nav {
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            display: flex; /* Visível por padrão no desktop */
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            flex-grow: 1;
+            margin-left: 2rem;
+        }
+
+        #main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #main-nav li {
+            margin: 0.5rem;
+        }
+
+        #main-nav a {
+            color: var(--text-color);
+            padding: 1.6rem 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            font-size: 1.4rem;
+            text-decoration: none; /* Adicionado para remover sublinhado */
+        }
+
+        #main-nav a:hover {
+            background: var(--hover-color); /* Cor fúcsia mantida */
+        }
+
+        /* --- Estilos para o botão do menu hambúrguer (oculto por padrão) --- */
+       .menu-toggle {
+            display: none; /* Oculto por padrão no desktop */
+            width: 30px; /* Largura do ícone hambúrguer */
+            height: 24px; /* Altura total do ícone hambúrguer */
+            position: relative;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+       .menu-toggle span { /* As barras do hambúrguer */
+            position: absolute;
+            height: 3px; /* Altura de cada barra */
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Transição para o efeito X */
+            left: 0;
+        }
+
+       .menu-toggle span:nth-child(1) {
+            top: 0;
+        }
+
+       .menu-toggle span:nth-child(2) {
+            top: 10px; /* Posição da barra do meio */
+        }
+
+       .menu-toggle span:nth-child(3) {
+            top: 20px; /* Posição da última barra */
+        }
+
+        /* Efeito de X para fechar/recolher o menu */
+       .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+       .menu-toggle.active span:nth-child(2) {
+            opacity: 0; /* Desaparece a barra do meio */
+        }
+
+       .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+        main {
+            max-width: 90rem;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        details p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Ajuste da altura dos iframes */
+        iframe {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            border: none;
+            height: 370px; /* Ajustado para 370px */
+            /* loading="lazy" é um atributo HTML, não CSS */
+        }
+
+       .small-iframe {
+            height: 160px; /* Ajustado para 160px */
+        }
+
+        #rodape {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 2rem auto;
+            max-width: 90rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        #rodape a {
+            color: var(--text-color);
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            white-space: nowrap;
+            font-size: 1.6rem; /* AUMENTADO para 1.6rem (16px) */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #rodape a:hover {
+            background: var(--hover-color);
+        }
+
+       .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+       .social-icons a {
+            color: var(--text-color);
+            font-size: 3rem;
+            transition: color 0.3s;
+        }
+
+       .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        footer {
+            background: #111;
+            padding: 2rem;
+            text-align: center;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+        
+        .copyright a { 
+           text-decoration: none;
+        }
+
+        footer mark {
+            background: none;
+            color: var(--primary-color);
+         }
+       
+        footer p {
+            font-size: 1.4rem; /* 1.6rem (16px) */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            html {
+                font-size: 58%;
+            }
+
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+           .header-branding {
+                gap: 1rem;
+            }
+
+           .header-branding img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+           .header-branding h1 {
+                font-size: 2.8rem;
+            }
+
+            /* Oculta a navegação principal (desktop) */
+            #main-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: right 0.3s ease-in-out;
+                z-index: 999;
+                margin-left: 0;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            #main-nav.active {
+                right: 0;
+            }
+
+            #main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            #main-nav li {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            #main-nav a {
+                font-size: 1.6rem;
+                padding: 1rem 1.5rem;
+                justify-content: center;
+            }
+
+            /* Mostra o botão do menu hambúrguer */
+           .menu-toggle {
+                display: flex;
+            }
+            
+            summary {
+                font-size: 1.8rem;
+            }
+            details p {
+                font-size: 1.7rem;
+            }
+
+            #rodape {
+                gap: 0.8rem;
+            }
+
+            #rodape a {
+                font-size: 1.4rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1.5rem;
+            }
+
+           .social-icons a {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 60%;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            summary {
+                font-size: 1.6rem;
+            }
+            details p {
+                font-size: 1.5rem;
+            }
+
+            header img {
+                width: 8rem;
+            }
+
+            #rodape a {
+                padding: 0.6rem 0.8rem;
+                font-size: 1.2rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1rem;
+            }
+
+           .social-icons a {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-branding">
+        <img src="https://github.com/prarezende.png" alt="Logo">
+        <h1>@prarezende</h1>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="https://www.google.com.br" target="_blank"><i class="fas fa-search"></i> Google</a></li>
+            <li><a href="https://www.udemy.com" target="_blank"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
+            <li><a href="https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"><i class="fas fa-laptop-code"></i> Dio</a></li>
+            <li><a href="https://www.Dltec.com.br" target="_blank"><i class="fas fa-desktop"></i> Dltec</a></li>
+            <li><a href="https://www.voitto.com.br" target="_blank"><i class="fas fa-chart-line"></i> Voitto</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"><i class="fas fa-music"></i> Patty/MP3</a></li>
+        </ul>
     </nav>
-	  </details>
-   </header>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
 
-<p>
-<!-- Festa Top: -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Festa Top Playlist"></iframe>
-<!-- Slow Pop & Country -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Slow Pop & Country Playlist"></iframe>
-<!-- Mix 80_2019 -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title=" Mix 80_2019 Playlist"></iframe>
+<main>
+    <details>
+        <summary>Sobre este site</summary>
+        <p>Este site foi criado para centralizar os links e playlists que mais utilizo no meu dia a dia. Está em constante evolução.</p>
+    </details>
 
-<!-- Lentas Inesquecíveis|Unforgettable Slow Songs: -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4gCCpdK16RCsYN2CEstwYP?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lentas Inesqueciveis|Unforgettable Slow Songs"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Festa Top Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Slow Pop & Country Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mix 80_2019 Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4gCCpdK16RCsYN2CEstwYP?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lentas Inesqueciveis|Unforgettable Slow Songs"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Tocam o Coração"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavy Metal Playlist"></iframe>
 
-<!-- Fingerstyle <iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4ErdfOdFfbDdISqqgv23GV?utm_source=generator" width="30%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Fingerstyle"></iframe> -->
-<!-- Tocam o Coração:   -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Tocam o Coração"></iframe>
-<!-- Heavy Metal:  -->
-<iframe style="border-radius:8px" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="100%" height="374" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavy Metal Playlist"></iframe> 
-<!-- Alternativa -->
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Alternativa Playlist"></iframe>
-</body>
+    <iframe class="small-iframe" style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Alternativa Playlist"></iframe>
+</main>
 
-<div>
-<footer class="footer-distributed">
+<footer>
     <div id="rodape">
-
-<a href= "https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"> Festa Top</a> |
-<a href= "https://open.spotify.com/playlist/60mRonQ7taffA4XKjTfDl0?si=7ce3b36c810e4e86" target="_blank"> Slow Pop&Country</a> |
-<a href= "https://open.spotify.com/playlist/4LoMy7GKS27ADplFFmYtYS?si=c96d981cf53c4d90" target="_blank"> Tocam o Coração</a> |
-<!-- <a href= "https://open.spotify.com/playlist/4ErdfOdFfbDdISqqgv23GV?si=c59277cc02b24a88" target="_blank"> Fingerstyle</a> | -->
-<a href="https://open.spotify.com/playlist/4gCCpdK16RCsYN2CEstwYP?si=3b96196515ee4653
-" target="_blank"> Lentas Inesquecíveis</a> |
-<a href= "https://open.spotify.com/playlist/15eG4OqcDBqaDqkUTkiaha?si=8f47ca709190463d" target="_blank"> Mix 80_2019</a> |
-<a href = "https://open.spotify.com/playlist/4jwGfWyIhfMF12iabW9mvr?si=c0e8bf288a644b4b" target="_blank"> Heavy Metal</a>
+        <a href="https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"><i class="fab fa-spotify"></i> Festa Top</a>
+        <a href="https://open.spotify.com/playlist/60mRonQ7taffA4XKjTfDl0?si=7ce3b36c810e4e86" target="_blank"><i class="fab fa-spotify"></i> Slow Pop&Country</a>
+        <a href="https://open.spotify.com/playlist/4LoMy7GKS27ADplFFmYtYS?si=c96d981cf53c4d90" target="_blank"><i class="fab fa-spotify"></i> Tocam o Coração</a>
+        <a href="https://open.spotify.com/playlist/4gCCpdK16RCsYN2CEstwYP?si=3b96196515ee4653" target="_blank"><i class="fab fa-spotify"></i> Lentas Inesquecíveis</a>
+        <a href="https://open.spotify.com/playlist/15eG4OqcDBqaDqkUTkiaha?si=8f47ca709190463d" target="_blank"><i class="fab fa-spotify"></i> Mix 80_2019</a>
+        <a href="https://open.spotify.com/playlist/4jwGfWyIhfMF12iabW9mvr?si=c0e8bf288a644b4b" target="_blank"><i class="fab fa-spotify"></i> Heavy Metal</a>
+        <a href="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" target="_blank"><i class="fab fa-spotify"></i> Alternativa</a>
     </div>
 
+    <div class="social-icons">
+        <a href="https://instagram.com/prarezende" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/patricia-albuquerque-ti" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/prarezende" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="Home"><i class="fas fa-home"></i></a>
+    </div>
+    <div class="copyright">
+        <p>© 2025 <a href="mailto:prarezende@yahoo.com"><mark>@prarezende</a></mark> | Todos os direitos reservados.</p>
+    </div>
+</footer>
 
-<!-- <footer>
-    
-    
-	<section><h6> Todos os Direitos Reservados: @prarezende
-        <h6 id="atual">Atualizado em 26/01/2022</section>
-</footer> -->
-	<!--	<footer class="footer-distributed"> -->
-	
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
 
- 		<div class="footer-right">  <!--
-			trocar para social-icons -->
- 
-				<a href="img/icons8-facebook-64.png" target="_blank"><i class="fa fa-facebook"></i><img src="img/icons8-facebook-64.png" alt="icone github"> </a>
-				<a href="img/icons8-instagram-64.png" target="_blank"><i class="fa fa-instagram"></i><img src="img/icons8-instagram-64.png" alt="icone instagram"> </a>
-				<a href="img/icons8-linkedin-64.png" target="_blank" ><i class="fa fa-linkedin"></i><img src="img/icons8-linkedin-circled-48.png" alt="icone linkedin"> </a>
-				<a href="https://github.com/prarezende" target="_blank"><img src="img/icons8-github-50.png" alt="icone github"></a>
-				<a href="#principal" ><i class="material-symbols-outlined">home</i>
-				             
-		 </div> 
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+   <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@prarezende - Links e Playlists</title>
+    <meta name="description" content="Ouça playlists do Spotify e acesse seus links favoritos.">
+    <meta name="keywords" content="playlists, spotify, música, links, estudo, produtividade">
 
-		<!--	<div class="footer-left">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-				<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
+    <style>
+        :root {
+            --primary-color: #007acc; /* Cor primária (azul) */
+            --primary-color-dark: #005f99; /* Tom mais escuro para o gradiente */
+            --secondary-color: #001f3f; /* Cor secundária (azul marinho quase preto) */
+            --hover-color: #B00E50; /* Cor ao passar o mouse (fúcsia) */
+            --background-color: #000; /* Fundo principal (preto) */
+            --text-color: whitesmoke; /* Cor do texto claro */
+            --border-radius: 8px; /* Raio da borda padrão */
+        }
 
-					<a href="#">Blog</a>
+        /* Usando a técnica de 1rem = 10px para facilitar a responsividade */
+        html {
+            font-size: 62.5%; /* Base: 16px * 0.625 = 10px */
+        }
 
-					<a href="#">Pricing</a>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
 
-					<a href="#">About</a>
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        header {
+    background: linear-gradient(270deg, #007acc, #005f99, #001f3f, #005f99, #007acc);
+    background-size: 1000% 1000%;
+    animation: gradientWave 12s ease infinite;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius);
+}
 
-					<a href="#">Faq</a>
+@keyframes gradientWave {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
 
-					<a href="#">Contact</a>
-					
-					<a href="#">Under Construction</a>
-				</p> 
 
-          </div> -->
- <div class="copyright">			
-	 <mark> <a href="mailto:prarezende@yahoo.com">&copy; 2022 - 2023 - @prarezende</a></mark>         
- </div>	
+       .header-branding {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
 
-		</footer>
+       .header-branding img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+
+       .header-branding h1 {
+            font-size: 3.2rem;
+            margin: 0;
+        } 
+        
+
+        /* --- Estilos para o menu de navegação principal (desktop) --- */
+        #main-nav {
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            display: flex; /* Visível por padrão no desktop */
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            flex-grow: 1;
+            margin-left: 2rem;
+        }
+
+        #main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #main-nav li {
+            margin: 0.5rem;
+        }
+
+        #main-nav a {
+            color: var(--text-color);
+            padding: 1.6rem 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            font-size: 1.4rem;
+            text-decoration: none; /* Adicionado para remover sublinhado */
+        }
+
+        #main-nav a:hover {
+            background: var(--hover-color); /* Cor fúcsia mantida */
+        }
+
+        /* --- Estilos para o botão do menu hambúrguer (oculto por padrão) --- */
+       .menu-toggle {
+            display: none; /* Oculto por padrão no desktop */
+            width: 30px; /* Largura do ícone hambúrguer */
+            height: 24px; /* Altura total do ícone hambúrguer */
+            position: relative;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+       .menu-toggle span { /* As barras do hambúrguer */
+            position: absolute;
+            height: 3px; /* Altura de cada barra */
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Transição para o efeito X */
+            left: 0;
+        }
+
+       .menu-toggle span:nth-child(1) {
+            top: 0;
+        }
+
+       .menu-toggle span:nth-child(2) {
+            top: 10px; /* Posição da barra do meio */
+        }
+
+       .menu-toggle span:nth-child(3) {
+            top: 20px; /* Posição da última barra */
+        }
+
+        /* Efeito de X para fechar/recolher o menu */
+       .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+       .menu-toggle.active span:nth-child(2) {
+            opacity: 0; /* Desaparece a barra do meio */
+        }
+
+       .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+        main {
+            max-width: 90rem;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        details p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Ajuste da altura dos iframes */
+        iframe {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            border: none;
+            height: 370px; /* Ajustado para 370px */
+            /* loading="lazy" é um atributo HTML, não CSS */
+        }
+
+       .small-iframe {
+            height: 160px; /* Ajustado para 160px */
+        }
+
+        #rodape {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 2rem auto;
+            max-width: 90rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        #rodape a {
+            color: var(--text-color);
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            white-space: nowrap;
+            font-size: 1.6rem; /* AUMENTADO para 1.6rem (16px) */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #rodape a:hover {
+            background: var(--hover-color);
+        }
+
+       .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+       .social-icons a {
+            color: var(--text-color);
+            font-size: 3rem;
+            transition: color 0.3s;
+        }
+
+       .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        footer {
+            background: #111;
+            padding: 2rem;
+            text-align: center;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+        
+        .copyright a { 
+           text-decoration: none;
+        }
+
+        footer mark {
+            background: none;
+            color: var(--primary-color);
+         }
+       
+        footer p {
+            font-size: 1.4rem; /* 1.6rem (16px) */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            html {
+                font-size: 58%;
+            }
+
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+           .header-branding {
+                gap: 1rem;
+            }
+
+           .header-branding img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+           .header-branding h1 {
+                font-size: 2.8rem;
+            }
+
+            /* Oculta a navegação principal (desktop) */
+            #main-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: right 0.3s ease-in-out;
+                z-index: 999;
+                margin-left: 0;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            #main-nav.active {
+                right: 0;
+            }
+
+            #main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            #main-nav li {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            #main-nav a {
+                font-size: 1.6rem;
+                padding: 1rem 1.5rem;
+                justify-content: center;
+            }
+
+            /* Mostra o botão do menu hambúrguer */
+           .menu-toggle {
+                display: flex;
+            }
+            
+            summary {
+                font-size: 1.8rem;
+            }
+            details p {
+                font-size: 1.7rem;
+            }
+
+            #rodape {
+                gap: 0.8rem;
+            }
+
+            #rodape a {
+                font-size: 1.4rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1.5rem;
+            }
+
+           .social-icons a {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 60%;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            summary {
+                font-size: 1.6rem;
+            }
+            details p {
+                font-size: 1.5rem;
+            }
+
+            header img {
+                width: 8rem;
+            }
+
+            #rodape a {
+                padding: 0.6rem 0.8rem;
+                font-size: 1.2rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1rem;
+            }
+
+           .social-icons a {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-branding">
+        <img src="https://github.com/prarezende.png" alt="Logo">
+        <h1>@prarezende</h1>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="https://www.google.com.br" target="_blank"><i class="fas fa-search"></i> Google</a></li>
+            <li><a href="https://www.udemy.com" target="_blank"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
+            <li><a href="https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"><i class="fas fa-laptop-code"></i> Dio</a></li>
+            <li><a href="https://www.Dltec.com.br" target="_blank"><i class="fas fa-desktop"></i> Dltec</a></li>
+            <li><a href="https://www.voitto.com.br" target="_blank"><i class="fas fa-chart-line"></i> Voitto</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"><i class="fas fa-music"></i> Patty/MP3</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<main>
+    <details>
+        <summary>Sobre este site</summary>
+        <p>Este site foi criado para centralizar os links e playlists que mais utilizo no meu dia a dia. Está em constante evolução.</p>
+    </details>
+
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Festa Top Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Slow Pop & Country Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mix 80_2019 Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4gCCpdK16RCsYN2CEstwYP?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lentas Inesqueciveis|Unforgettable Slow Songs"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Tocam o Coração"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavy Metal Playlist"></iframe>
+
+    <iframe class="small-iframe" style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Alternativa Playlist"></iframe>
+</main>
+
+<footer>
+    <div id="rodape">
+        <a href="https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"><i class="fab fa-spotify"></i> Festa Top</a>
+        <a href="https://open.spotify.com/playlist/60mRonQ7taffA4XKjTfDl0?si=7ce3b36c810e4e86" target="_blank"><i class="fab fa-spotify"></i> Slow Pop&Country</a>
+        <a href="https://open.spotify.com/playlist/4LoMy7GKS27ADplFFmYtYS?si=c96d981cf53c4d90" target="_blank"><i class="fab fa-spotify"></i> Tocam o Coração</a>
+        <a href="https://open.spotify.com/playlist/4gCCpdK16RCsYN2CEstwYP?si=3b96196515ee4653" target="_blank"><i class="fab fa-spotify"></i> Lentas Inesquecíveis</a>
+        <a href="https://open.spotify.com/playlist/15eG4OqcDBqaDqkUTkiaha?si=8f47ca709190463d" target="_blank"><i class="fab fa-spotify"></i> Mix 80_2019</a>
+        <a href="https://open.spotify.com/playlist/4jwGfWyIhfMF12iabW9mvr?si=c0e8bf288a644b4b" target="_blank"><i class="fab fa-spotify"></i> Heavy Metal</a>
+        <a href="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" target="_blank"><i class="fab fa-spotify"></i> Alternativa</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://instagram.com/prarezende" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/patricia-albuquerque-ti" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/prarezende" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="Home"><i class="fas fa-home"></i></a>
+    </div>
+    <div class="copyright">
+        <p>© 2025 <a href="mailto:prarezende@yahoo.com"><mark>@prarezende</a></mark> | Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        menuToggle.classList.toggle('active'); /* Adicionado para ativar o efeito X */
+    });
+</script>
+
+</body>
 </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@prarezende - Links e Playlists</title>
+    <meta name="description" content="Ouça playlists do Spotify e acesse seus links favoritos.">
+    <meta name="keywords" content="playlists, spotify, música, links, estudo, produtividade">
+
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #007acc; /* Cor primária (azul) */
+            --primary-color-dark: #005f99; /* Tom mais escuro para o gradiente */
+            --secondary-color: #001f3f; /* Cor secundária (azul marinho quase preto) */
+            --hover-color: #B00E50; /* Cor ao passar o mouse (fúcsia) */
+            --background-color: #000; /* Fundo principal (preto) */
+            --text-color: whitesmoke; /* Cor do texto claro */
+            --border-radius: 8px; /* Raio da borda padrão */
+        }
+
+        /* Usando a técnica de 1rem = 10px para facilitar a responsividade */
+        html {
+            font-size: 62.5%; /* Base: 16px * 0.625 = 10px */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+        
+        header {
+    background: linear-gradient(270deg, #007acc, #005f99, #001f3f, #005f99, #007acc);
+    background-size: 1000% 1000%;
+    animation: gradientWave 12s ease infinite;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius);
+}
+
+@keyframes gradientWave {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+       .header-branding {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+       .header-branding img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin-bottom: 0;
+        }
+
+       .header-branding h1 {
+            font-size: 3.2rem;
+            margin: 0;
+        } 
+        
+
+        /* --- Estilos para o menu de navegação principal (desktop) --- */
+        #main-nav {
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            display: flex; /* Visível por padrão no desktop */
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            flex-grow: 1;
+            margin-left: 2rem;
+        }
+
+        #main-nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #main-nav li {
+            margin: 0.5rem;
+        }
+
+        #main-nav a {
+            color: var(--text-color);
+            padding: 1.6rem 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            font-size: 1.4rem;
+            text-decoration: none; /* Adicionado para remover sublinhado */
+        }
+
+        #main-nav a:hover {
+            background: var(--hover-color); /* Cor fúcsia mantida */
+        }
+
+        /* --- Estilos para o botão do menu hambúrguer (oculto por padrão) --- */
+       .menu-toggle {
+            display: none; /* Oculto por padrão no desktop */
+            width: 30px; /* Largura do ícone hambúrguer */
+            height: 24px; /* Altura total do ícone hambúrguer */
+            position: relative;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+       .menu-toggle span { /* As barras do hambúrguer */
+            position: absolute;
+            height: 3px; /* Altura de cada barra */
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease; /* Transição para o efeito X */
+            left: 0;
+        }
+
+       .menu-toggle span:nth-child(1) {
+            top: 0;
+        }
+
+       .menu-toggle span:nth-child(2) {
+            top: 10px; /* Posição da barra do meio */
+        }
+
+       .menu-toggle span:nth-child(3) {
+            top: 20px; /* Posição da última barra */
+        }
+
+        /* Efeito de X para fechar/recolher o menu */
+       .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+       .menu-toggle.active span:nth-child(2) {
+            opacity: 0; /* Desaparece a barra do meio */
+        }
+
+       .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 10px; /* Move para o centro */
+        }
+
+        main {
+            max-width: 90rem;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        details {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        details p {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            margin-top: 1rem;
+        }
+
+        /* Ajuste da altura dos iframes */
+        iframe {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            border: none;
+            height: 370px; /* Ajustado para 370px */
+            /* loading="lazy" é um atributo HTML, não CSS */
+        }
+
+       .small-iframe {
+            height: 160px; /* Ajustado para 160px */
+        }
+
+        #rodape {
+            background: var(--secondary-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 2rem auto;
+            max-width: 90rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        #rodape a {
+            color: var(--text-color);
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            transition: background 0.3s;
+            white-space: nowrap;
+            font-size: 1.6rem; /* AUMENTADO para 1.6rem (16px) */
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #rodape a:hover {
+            background: var(--hover-color);
+        }
+
+       .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+       .social-icons a {
+            color: var(--text-color);
+            font-size: 3rem;
+            transition: color 0.3s;
+        }
+
+       .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        footer {
+            background: #111;
+            padding: 2rem;
+            text-align: center;
+            color: #aaa;
+            border-top: 1px solid #333;
+        }
+        
+        .copyright a { 
+           text-decoration: none;
+        }
+
+        footer mark {
+            background: none;
+            color: var(--primary-color);
+         }
+       
+        footer p {
+            font-size: 1.4rem; /* 1.6rem (16px) */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            html {
+                font-size: 58%;
+            }
+
+            header {
+                padding: 1rem 1.5rem;
+            }
+
+           .header-branding {
+                gap: 1rem;
+            }
+
+           .header-branding img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+           .header-branding h1 {
+                font-size: 2.8rem;
+            }
+
+            /* Oculta a navegação principal (desktop) */
+            #main-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: right 0.3s ease-in-out;
+                z-index: 999;
+                margin-left: 0;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            #main-nav.active {
+                right: 0;
+            }
+
+            #main-nav ul {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            #main-nav li {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            #main-nav a {
+                font-size: 1.6rem;
+                padding: 1rem 1.5rem;
+                justify-content: center;
+            }
+
+            /* Mostra o botão do menu hambúrguer */
+           .menu-toggle {
+                display: flex;
+            }
+            
+            summary {
+                font-size: 1.8rem;
+            }
+            details p {
+                font-size: 1.7rem;
+            }
+
+            #rodape {
+                gap: 0.8rem;
+            }
+
+            #rodape a {
+                font-size: 1.4rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1.5rem;
+            }
+
+           .social-icons a {
+                font-size: 2.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 60%;
+            }
+
+            header h1 {
+                font-size: 3rem;
+            }
+
+            summary {
+                font-size: 1.6rem;
+            }
+            details p {
+                font-size: 1.5rem;
+            }
+
+            header img {
+                width: 8rem;
+            }
+
+            #rodape a {
+                padding: 0.6rem 0.8rem;
+                font-size: 1.2rem; /* Ajustado para mobile */
+            }
+
+           .social-icons {
+                gap: 1rem;
+            }
+
+           .social-icons a {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-branding">
+        <img src="https://github.com/prarezende.png" alt="Logo">
+        <h1>@prarezende</h1>
+    </div>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="https://www.google.com.br" target="_blank"><i class="fas fa-search"></i> Google</a></li>
+            <li><a href="https://www.udemy.com" target="_blank"><i class="fas fa-graduation-cap"></i> Udemy</a></li>
+            <li><a href="https://dio.me/sign-up?ref=AX8MI2LVZE" target="_blank"><i class="fas fa-laptop-code"></i> Dio</a></li>
+            <li><a href="https://www.Dltec.com.br" target="_blank"><i class="fas fa-desktop"></i> Dltec</a></li>
+            <li><a href="https://www.voitto.com.br" target="_blank"><i class="fas fa-chart-line"></i> Voitto</a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLqrvxphfWBKNRTeuxhX7wi98x265P54-b" target="_blank"><i class="fas fa-music"></i> Patty/MP3</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<main>
+    <details>
+        <summary>Sobre este site</summary>
+        <p>Este site foi criado para centralizar os links e playlists que mais utilizo no meu dia a dia. Está em constante evolução.</p>
+    </details>
+
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Festa Top Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/60mRonQ7taffA4XKjTfDl0?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Slow Pop & Country Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/15eG4OqcDBqaDqkUTkiaha?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mix 80_2019 Playlist"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4gCCpdK16RCsYN2CEstwYP?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lentas Inesqueciveis|Unforgettable Slow Songs"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4LoMy7GKS27ADplFFmYtYS?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Tocam o Coração"></iframe>
+    <iframe style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/4jwGfWyIhfMF12iabW9mvr?utm_source=generator" width="100%" height="374" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Heavy Metal Playlist"></iframe>
+
+    <iframe class="small-iframe" style="border-radius:var(--border-radius)" src="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Alternativa Playlist"></iframe>
+</main>
+
+<footer>
+    <div id="rodape">
+        <a href="https://open.spotify.com/playlist/2kSL0LXJ0ADzV0WUtJJ0sn?si=0303fae3e58a41ae" target="_blank"><i class="fab fa-spotify"></i> Festa Top</a>
+        <a href="https://open.spotify.com/playlist/60mRonQ7taffA4XKjTfDl0?si=7ce3b36c810e4e86" target="_blank"><i class="fab fa-spotify"></i> Slow Pop&Country</a>
+        <a href="https://open.spotify.com/playlist/4LoMy7GKS27ADplFFmYtYS?si=c96d981cf53c4d90" target="_blank"><i class="fab fa-spotify"></i> Tocam o Coração</a>
+        <a href="https://open.spotify.com/playlist/4gCCpdK16RCsYN2CEstwYP?si=3b96196515ee4653" target="_blank"><i class="fab fa-spotify"></i> Lentas Inesquecíveis</a>
+        <a href="https://open.spotify.com/playlist/15eG4OqcDBqaDqkUTkiaha?si=8f47ca709190463d" target="_blank"><i class="fab fa-spotify"></i> Mix 80_2019</a>
+        <a href="https://open.spotify.com/playlist/4jwGfWyIhfMF12iabW9mvr?si=c0e8bf288a644b4b" target="_blank"><i class="fab fa-spotify"></i> Heavy Metal</a>
+        <a href="https://open.spotify.com/embed/playlist/2FMQWeCEp8Q5lDTJCLr0uD?utm_source=generator" target="_blank"><i class="fab fa-spotify"></i> Alternativa</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://instagram.com/prarezende" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/patricia-albuquerque-ti" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/prarezende" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="Home"><i class="fas fa-home"></i></a>
+    </div>
+    <div class="copyright">
+        <p>© 2025 <a href="mailto:prarezende@yahoo.com"><mark>@prarezende</a></mark> | Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        menuToggle.classList.toggle('active'); /* Adicionado para ativar o efeito X */
+    });
+</script>
+
+</body>
+</html>
+     menuToggle.classList.toggle('active'); /* Adicionado para ativar o efeito X */
+    });
+</script>
+
+</body>
+</html>
+
+	  
