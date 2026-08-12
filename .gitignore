@@ -1,0 +1,22 @@
+# Arquivos de backup
+*-backup.*
+*.bak
+*Old.*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+.docker/
+*.log
+
+# --- Terraform ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# --- Extras (Se você usar) ---
+.env               # ESSENCIAL: Nunca suba suas variáveis de ambiente com senhas!
